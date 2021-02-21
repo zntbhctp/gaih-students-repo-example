@@ -1,0 +1,110 @@
+ZİNNET BAHÇETEPE / FINAL PROJECT FOR GLOBAL AI HUB
+
+![image.png](attachment:image.png)
+
+
+## Yemek tarifi hazırlama programı
+
+class person():
+    adiniz = ""
+     
+    
+    def __init__(self, tarifSahibi):
+        self.adiniz = tarifSahibi
+
+               
+    def hosgeldin(self):
+        print("Merhaba " + self.adiniz + "," " malzemeleri seçin size yemek tarifi önerelim!")
+        
+         
+            
+
+tarifSahibi1 = person ("Zinnet")
+tarifSahibi1.hosgeldin()
+
+class yemekTarifi():
+    yemekCesidi = ""
+    malzemeler = ""
+    tahılBaklagil = ""
+    
+    def __init__(self, yemekCesidiSec, malzemeGir, tahılBaklagilSec):
+        self.yemekCesidi = yemekCesidiSec
+        self.malzemeler = malzemeGir
+        self.tahılBaklagil = tahılBaklagilSec
+    
+        
+    def yemegiSec(self):
+        print("Bugün {} yemek istiyorum." .format(self.yemekCesidi))
+    
+    def showTarif(self):
+        print(" {}  ve {} oluşan {}'nız afiyet olsun" .format(self.malzemeler, self.tahılBaklagil, self.yemekCesidi))
+              
+        
+  
+
+yemekTarifi1 = yemekTarifi("Çorba", "mercimek", "kinoa")
+
+
+yemekTarifi1.yemegiSec();
+
+class icerik1():
+    def __init__(self, yemekAdi):
+        self.yemekCesidi = yemekAdi
+        self.icindekiler = []
+        
+    def icerikListesi(self, malzeme_ekle):
+        print( "İçindekileri seç!")
+        self.icindekiler.append(malzeme_ekle)
+        
+    def showYTarifi(self, yemekAdi):
+        print("{}  aşağıdaki malzemelerden oluşuyor: " .format(self.yemekCesidi))
+        for i in self.icindekiler:
+            print(i)
+
+yemekTarifi2 = icerik1("Salata")
+yemekTarifi2.showYTarifi
+
+yemekTarifi2.icerikListesi("Domates")
+
+yemekTarifi2.icerikListesi("Soğan")
+
+yemekTarifi2.icerikListesi("Salatalık")
+
+yemekTarifi2.icerikListesi("Kıvırcık")
+
+yemekTarifi2.icerikListesi("Roka")
+
+yemekTarifi2.showYTarifi("Salata")
+
+    def __init__(self, yemekCesidiSec, malzemeGir, baharatGir, tahminiSureGir):
+        self.yemekCesidi = yemekCesidiSec
+        self.malzemeler = malzemeGir
+        self.baharatlar = baharatGir
+        self.sure = tahminiSureGir
+        
+    def yemegiSec(self):
+        print(self.adiniz + " bugün ne yemek istersin?")
+    
+    
+    def malzemeler(self, malzeme_ekle):
+        print(self.yemekCesidi + " Ne'li olsun istersin?")
+        self.malzemeler.append(malzeme_ekle)
+    
+    
+    def baharat(self, baharat_ekle):
+        print(self.yemekCesidi + " için hangi baharatları istersin?")
+        self.baharatlar.append(baharat_ekle)
+              
+        
+    def neZaman(self):
+        print(self.sure + " dk. sonra hazır! Afiyet olsun!")
+
+salataTarifi1 = tarifMalzemeleri("domates", "roka", "beyazPeynir", "kekik", "ceviz")
+salataTarifi1.salataTarifi()
+
+salataTarifi2 = tarifMalzemeleri("patates", "marul", "kaşar", "nane", "soğan")
+salataTarifi2.salataTarifi()
+
+salataTarifi3 = tarifMalzemeleri("brokoli", "semizotu", "labne", "karabiber", "yoğurt")
+salataTarifi3.salataTarifi()
+
